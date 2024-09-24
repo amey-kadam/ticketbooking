@@ -1,0 +1,155 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #d4e157, #81c784); /* Olive green gradient */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+header {
+    background-color: #388e3c;
+    color: white;
+}
+
+.main-content {
+    flex: 1; /* This makes sure the main content area expands to fill the remaining space */
+}
+
+
+
+/* Navigation Bar */
+nav ul {
+    background-color: #4caf50;
+    padding: 0.5em;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #2e7d32;
+}
+
+/* Main Content Area */
+main {
+    padding: 2em;
+    max-width: 800px;
+    background-color: white;
+    margin-left: 17%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 7.5%;
+}
+
+
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+button {
+    padding: 0.75em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #4caf50;
+    outline: none;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #388e3c;
+}
+
+
+
+/* Admin Panel Styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 1em;
+}
+
+ul li a {
+    background-color: #4caf50;
+    color: white;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+ul li a:hover {
+    background-color: #388e3c;
+}
+
+/* Ticket List */
+ul li {
+    padding: 1em;
+    background-color: #f9fbe7;
+    border: 1px solid #c5e1a5;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    body {
+        padding: 1em;
+    }
+    
+    main {
+        padding: 1em;
+        margin: 0;
+    }
+}
+
+
+
+.h1 {
+    color: rgb(255, 255, 255);
+}

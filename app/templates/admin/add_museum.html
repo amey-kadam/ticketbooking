@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Add Museum{% endblock %}
+
+{% block content %}
+<h2>Add Museum</h2>
+<form action="{{ url_for('admin.add_museum') }}" method="POST">
+    {{ form.hidden_tag() }}
+    
+    <div>
+        {{ form.state.label }}<br>
+        {{ form.state(size=32) }}<br>
+        {% for error in form.state.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </div>
+    
+    <div>
+        {{ form.district.label }}<br>
+        {{ form.district(size=32) }}<br>
+        {% for error in form.district.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </div>
+    
+    <div>
+        {{ form.city.label }}<br>
+        {{ form.city(size=32) }}<br>
+        {% for error in form.city.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </div>
+    
+    <div>
+        {{ form.name.label }}<br>
+        {{ form.name(size=32) }}<br>
+        {% for error in form.name.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </div>
+
+    <div>
+        {{ form.submit() }}
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block content %}
+<h2>Admin Dashboard</h2>
+
+<p>Welcome, {{ current_user.username }}. You have {% if current_user.is_admin %}admin{% else %}user{% endif %} access.</p>
+
+{% if current_user.is_admin %}
+<ul>
+    <li><a href="{{ url_for('admin.add_museum') }}">Add Museums</a></li>
+</ul>
+{% else %}
+<ul>
+    <li><a href="{{ url_for('user.book_ticket') }}">Book Tickets</a></li>
+    <li><a href="{{ url_for('user.view_tickets') }}">View Previous Tickets</a></li>
+</ul>
+{% endif %}
+
+<a href="{{ url_for('main_bp.logout') }}">Logout</a>
+{% endblock %}
